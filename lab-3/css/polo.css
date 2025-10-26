@@ -1,0 +1,231 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-color: #1d69be;
+  --red-color: #d32a2a;
+  --green-color: #3da842;
+  --yellow-color: #fdcb00;
+
+  --background-color: #EEEEEE;
+  --base-dark-color: #333;
+
+  --selected-color: var(--blue-color);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: var(--base-dark-color);
+  background-color: var(--background-color);
+}
+
+main {
+  margin: auto 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 80%;
+  gap: 2rem;
+  justify-content: center;
+  background-color: var(--background-color);
+  border-radius: 12px;
+}
+
+img {
+  display: none;
+  max-width: 500px;
+  background-color: white;
+  border: 2px solid var(--selected-color);
+  border-radius: 10px;
+}
+
+.options {
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  & > p {
+    margin: 0;
+  }
+}
+
+.name-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: var(--selected-color);
+    padding: 3px 11px;
+    border-radius: 5px;
+  }
+}
+
+.color-container {
+  input[name="color"] {
+    display: none;
+  }
+
+  & > div {
+    display: flex;
+    gap: .8rem;
+  }
+
+  label {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--base-dark-color);
+    background-color: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.2s ease;
+
+    &[for="color-blue"] { background: var(--blue-color) }
+    &[for="color-red"] { background: var(--red-color) }
+    &[for="color-green"] { background: var(--green-color) }
+    &[for="color-yellow"] { background: var(--yellow-color) }
+
+    &:hover {
+      border-radius: 20%;
+    }
+  }
+}
+
+.size-container {
+  input[name="size"] {
+    display: none;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+  } 
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--base-dark-color);
+    border-radius: 5px;
+    border: 2px solid var(--base-dark-color);
+    cursor: pointer;
+    background: none;
+
+    p {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.add-button {
+  background-color: var(--selected-color);
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 7px;
+  border: 2px solid var(--base-dark-color);
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+body:has(#color-blue:checked) {
+  --selected-color: var(--blue-color);
+
+  label[for="color-blue"] {
+    box-shadow: 0 0 0 4px var(--background-color) inset;
+  }
+
+  .blue-img {
+    display: block;
+  }
+}
+
+body:has(#color-red:checked) {
+  --selected-color: var(--red-color);
+
+  label[for="color-red"] {
+    box-shadow: 0 0 0 4px var(--background-color) inset;
+  }
+
+  .red-img {
+    display: block;
+  }
+}
+
+body:has(#color-green:checked) {
+  --selected-color: var(--green-color);
+
+  label[for="color-green"] {
+    box-shadow: 0 0 0 4px var(--background-color) inset;
+  }
+
+  .green-img {
+    display: block;
+  }
+}
+
+body:has(#color-yellow:checked) {
+  --selected-color: var(--yellow-color);
+
+  label[for="color-yellow"] {
+    box-shadow: 0 0 0 4px var(--background-color) inset;
+  }
+
+  .yellow-img {
+    display: block;
+  }
+}
+
+.size-container:has(#size-s:checked) {
+  label[for="size-s"] {
+    background: var(--selected-color);
+    color: white;
+  }
+}
+
+.size-container:has(#size-m:checked) {
+  label[for="size-m"] {
+    background: var(--selected-color);
+    color: white;
+  }
+}
+
+.size-container:has(#size-l:checked) {
+  label[for="size-l"] {
+    background: var(--selected-color);
+    color: white;
+  }
+}
+
+.size-container:has(#size-xl:checked) {
+  label[for="size-xl"] {
+    background: var(--selected-color);
+    color: white;
+  }
+}

@@ -4,9 +4,52 @@
     <meta charset="UTF-8" />
     <title>Lab 3</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/polo.css" />
   </head>
   <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
+    <main>
+      <section class="images">
+        <img class="blue-img" src="images/polo_b.png" alt="blue_polo">
+        <img class="red-img"  src="images/polo_r.png" alt="red_polo">
+        <img class="green-img"  src="images/polo_g.png" alt="green_polo">
+        <img class="yellow-img"  src="images/polo_y.png" alt="yellow_polo">
+      </section>
+      
+      <section class="options">
+        <div class="name-container">
+          <h2 class="product-name">Koszulka Polo</h2>
+          <p>Promocja!</p>
+        </div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptate velit iure.</p>
+        <div class="color-container">
+          <h3>Kolor</h3>
+          <input type="radio" name="color" id="color-blue" checked>
+          <input type="radio" name="color" id="color-red">
+          <input type="radio" name="color" id="color-green">
+          <input type="radio" name="color" id="color-yellow">
+          <div>
+            <label for="color-blue"></label>
+            <label for="color-red"></label>
+            <label for="color-green"></label>
+            <label for="color-yellow"></label>
+          </div>
+        </div>
+        <div class="size-container">
+          <h3>Rozmiar</h3>
+          <input type="radio" name="size" id="size-s">
+          <input type="radio" name="size" id="size-m" checked>
+          <input type="radio" name="size" id="size-l">
+          <input type="radio" name="size" id="size-xl">
+          <div>
+            <label for="size-s"><p>S</p></label>
+            <label for="size-m"><p>M</p></label>
+            <label for="size-l"><p>L</p></label>
+            <label for="size-xl"><p>XL</p></label>
+          </div>
+        </div>
+        <h2 class="price" id="price">59,99 zł</h2>
+        <input class="add-button" type="button" value="🛒 Do koszyka">
+      </section>
+    </main>
   </body>
 </html>
