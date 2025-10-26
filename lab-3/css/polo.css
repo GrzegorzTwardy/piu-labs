@@ -104,9 +104,16 @@ img {
     &[for="color-yellow"] { background: var(--yellow-color) }
 
     &:hover {
-      border-radius: 20%;
+      box-shadow: 0 0 0 3px var(--background-color) inset;
     }
   }
+}
+
+@keyframes rotate360 {
+  0% { transform: rotate(0deg); }
+  33% { transform: rotate(-20deg); }
+  66% { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .size-container {
@@ -133,6 +140,16 @@ img {
     border: 2px solid var(--base-dark-color);
     cursor: pointer;
     background: none;
+    transition: 0.1s;
+
+    &:hover {
+      font-size: 1.2rem;
+      animation: rotate360 0.4s ease-in-out forwards;
+    }
+
+    &:active {
+      font-size: 0.2rem;
+    }
 
     p {
       transform: translateY(-1px);
@@ -148,9 +165,17 @@ img {
   border-radius: 7px;
   border: 2px solid var(--base-dark-color);
   padding: 1.5rem 2rem 1.5rem 1.5rem;
+  transition: 0.2s ease;
 
   &:hover {
     cursor: pointer;
+    box-shadow: 0 0 2px 1px var(--base-dark-color);
+  }
+
+  &:active {
+    background-color: #11529c;
+    color: rgb(231, 231, 231);
+    box-shadow: none;
   }
 }
 
