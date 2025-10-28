@@ -4,9 +4,24 @@
     <meta charset="UTF-8" />
     <title>Lab 4</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
   </head>
   <body>
-    <h1>Lab 4</h1>
+    <h1>Kanban</h1>
+    <main>
+      <section class="column todo">
+        <h2>Do zrobienia</h2>
+        <input id="add-todo-button" type="button" value="Dodaj kartę">
+      </section>
+      <section class="column in-progress">
+        <h2>W trakcie</h2>
+        <input id="add-inp-button" type="button" value="Dodaj kartę">
+      </section>
+      <section class="column done">
+        <h2>Zrobione</h2>
+        <input id="add-done-button" type="button" value="Dodaj kartę">
+      </section>
+    </main>
     <a href="..">Powrót</a>
   </body>
 </html>
