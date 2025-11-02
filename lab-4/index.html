@@ -7,21 +7,74 @@
     <script src="js/app.js" defer></script>
   </head>
   <body>
-    <h1>Kanban</h1>
+    <header>
+      <h1>Kanban</h1>
+      <a href="..">Powrót</a>
+    </header>
     <main>
       <section class="column todo">
-        <h2>Do zrobienia</h2>
-        <input id="add-todo-button" type="button" value="Dodaj kartę">
+        <input id="todo-color" class="column-color-picker" type="color" name="column-color">
+        <div class="column-info">
+          <h2>Do zrobienia</h2>
+          <h2 class="counter">0</h2>
+        </div>
+        <div class="button-wrapper">
+          <input class="add-card-button" type="button" value="DODAJ KARTĘ">
+          <div class="options">
+            <label for="todo-color" class="color-column-button">KOLORUJ</label>
+            <label class="sort-button" for="todo-sort">SORTUJ</label>
+          </div>
+        </div>
+        <select id="todo-sort" name="todo-sort" class="sort-list">
+          <option value="no-sort">— brak sortowania —</option>
+          <option value="a-z">A-Z (po tytule)</option>
+          <option value="z-a">Z-A (po tytule)</option>
+          <option value="o-n">Od najstarszych</option>
+          <option value="n-o">Od najnowszych</option>
+        </select>
       </section>
       <section class="column in-progress">
-        <h2>W trakcie</h2>
-        <input id="add-inp-button" type="button" value="Dodaj kartę">
+        <input id="in-progress-color" class="column-color-picker" type="color" name="column-color">
+        <div class="column-info">
+          <h2>W trakcie</h2>
+          <h2 class="counter">0</h2>
+        </div>
+        <div class="button-wrapper">
+          <input class="add-card-button" type="button" value="DODAJ KARTĘ">
+          <div class="options">
+            <label for="in-progress-color" class="color-column-button">KOLORUJ</label>
+            <label class="sort-button" for="in-progress-sort">SORTUJ</label>
+          </div>
+        </div>
+        <select id="in-progress-sort" name="in-progress-sort" class="sort-list">
+          <option value="no-sort">— brak sortowania —</option>
+          <option value="a-z">A-Z (po tytule)</option>
+          <option value="z-a">Z-A (po tytule)</option>
+          <option value="o-n">Od najstarszych</option>
+          <option value="n-o">Od najnowszych</option>
+        </select>
       </section>
       <section class="column done">
-        <h2>Zrobione</h2>
-        <input id="add-done-button" type="button" value="Dodaj kartę">
+        <input id="done-color" class="column-color-picker" type="color" name="column-color">
+        <div class="column-info">
+          <h2>Zrobione</h2>
+          <h2 class="counter">0</h2>
+        </div>
+        <div class="button-wrapper">
+          <input class="add-card-button" type="button" value="DODAJ KARTĘ">
+          <div class="options">
+            <label for="done-color" class="color-column-button">KOLORUJ</label>
+            <label class="sort-button" for="done-sort">SORTUJ</label>
+          </div>
+        </div>
+        <select id="done-sort" name="done-sort" class="sort-list">
+          <option value="no-sort">— brak sortowania —</option>
+          <option value="a-z">A-Z (po tytule)</option>
+          <option value="z-a">Z-A (po tytule)</option>
+          <option value="o-n">Od najstarszych</option>
+          <option value="n-o">Od najnowszych</option>
+        </select>
       </section>
     </main>
-    <a href="..">Powrót</a>
   </body>
 </html>
