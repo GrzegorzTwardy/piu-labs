@@ -1,0 +1,87 @@
+<style>
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+  }
+
+  .image ::slotted(img) {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .price {
+    color: #e63946;
+    font-weight: bold;
+  }
+
+  .details {
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  .promo {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e63946;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    border-radius: 4px;
+  }
+
+  span[name="promo"]:empty + .promo {
+    display: none;
+    color: rgba(255, 255, 255, 0);
+  }
+
+  button {
+    margin-top: auto;
+    padding: 10px;
+    border: none;
+    background: #1d3557;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #457b9d;
+  }
+</style>
+
+<div class="card">
+  <div class="promo">
+    <slot name="promo"></slot>
+  </div>
+
+  <div class="image">
+    <slot name="image"></slot>
+  </div>
+
+  <div class="name">
+    <slot name="name"></slot>
+  </div>
+
+  <div class="price">
+    <slot name="price"></slot>
+  </div>
+
+  <div class="details">Kolory: <slot name="colors"></slot></div>
+
+  <div class="details">Rozmiary: <slot name="sizes"></slot></div>
+
+  <button>Do koszyka</button>
+</div>
