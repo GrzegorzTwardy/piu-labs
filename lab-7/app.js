@@ -1,1 +1,1 @@
-import './product-card.js';
+import './components/product-card-element.js';
