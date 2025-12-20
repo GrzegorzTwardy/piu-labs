@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Bluza bawełniana",
+    "price": 89.99,
+    "image": "imgs/hoodie.jpeg",
+    "colors": ["Czarny", "Biały"],
+    "sizes": ["XS", "S", "M", "L"],
+    "promotion": "-20%"
+  },
+  {
+    "id": 2,
+    "name": "Czapka",
+    "price": 49.99,
+    "image": "imgs/cap.png",
+    "colors": ["Czarny"],
+    "sizes": ["uniwersalny"]
+  },
+  {
+    "id": 3,
+    "name": "Koszulka",
+    "price": 29.99,
+    "image": "imgs/tee.jpg",
+    "colors": ["Biały", "Niebieski", "Czerwony"],
+    "sizes": ["L", "XL"],
+    "promotion": "Nowość!"
+  },
+  {
+    "id": 4,
+    "name": "Spodnie",
+    "price": 119.39,
+    "image": "imgs/pants.jpg",
+    "colors": ["Czarny", "Biały"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 5,
+    "name": "Kurtka",
+    "price": 219.99,
+    "image": "imgs/jacket.png",
+    "colors": ["Beżowy", "Czarny"],
+    "sizes": ["brak dostępnych"],
+    "promotion": "-30%"
+  },
+  {
+    "id": 6,
+    "name": "Buty skórzane",
+    "price": 279.99,
+    "image": "imgs/shoes.jpg",
+    "colors": ["Brązowe", "Czarne"],
+    "sizes": ["39", "40", "41", "42"]
+  }
+]

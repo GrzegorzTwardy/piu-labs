@@ -7,73 +7,17 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Produkty</h1>
+    <div class="cart-toast" hidden>Dodano produkt do koszyka</div>
+    <header class="site-header">
+      <h1>Sklep</h1>
+
+      <button id="toggle-cart">Mój koszyk</button>
+
+      <div class="cart-container">
+        <cart-element></cart-element>
+      </div>
     </header>
-    <div class="products">
-      <product-card>
-        <span slot="promotion">-20%</span>
-        <img slot="image" src="imgs/hoodie.jpeg" alt="Bluza bawełniana" />
-        <span slot="name">Bluza bawełniana</span>
-        <span slot="price">89,99 zł</span>
-        <div slot="colors">Czarny</div>
-        <div slot="colors">Biały</div>
-        <div slot="sizes">XS</div>
-        <div slot="sizes">S</div>
-        <div slot="sizes">M</div>
-        <div slot="sizes">L</div>
-      </product-card>
-      <product-card>
-        <img slot="image" src="imgs/cap.png" alt="Czapka" />
-        <span slot="name">Czapka</span>
-        <span slot="price">49,99 zł</span>
-        <div slot="colors">Czarny</div>
-        <div slot="sizes">uniwersalny</div>
-      </product-card>
-      <product-card>
-        <span slot="promotion">Nowość!</span>
-        <img slot="image" src="imgs/tee.jpg" alt="koszulka" />
-        <span slot="name">Koszulka</span>
-        <span slot="price">29,99 zł</span>
-        <div slot="colors">Biały</div>
-        <div slot="colors">Niebieski</div>
-        <div slot="colors">Czerwony</div>
-        <div slot="sizes">L</div>
-        <div slot="sizes">XL</div>
-      </product-card>
-      <product-card>
-        <img slot="image" src="imgs/pants.jpg" alt="Spodnie" />
-        <span slot="name">Spodnie</span>
-        <span slot="price">119,39 zł</span>
-        <div slot="colors">Czarny</div>
-        <div slot="colors">Biały</div>
-        <div slot="sizes">S</div>
-        <div slot="sizes">M</div>
-        <div slot="sizes">L</div>
-        <div slot="sizes">XL</div>
-      </product-card>
-      <product-card>
-        <span slot="promotion">-30%</span>
-        <img slot="image" src="imgs/jacket.png" alt="Kurtka damska" />
-        <span slot="name">Kurtka</span>
-        <span slot="price">219,99 zł</span>
-        <div slot="colors">Beżowy</div>
-        <div slot="colors">Czarny</div>
-        <div slot="sizes">brak dostępnych</div>
-      </product-card>
-      <product-card>
-        <img slot="image" src="imgs/shoes.jpg" alt="buty" />
-        <span slot="name">Buty skórzane</span>
-        <span slot="price">279,99 zł</span>
-        <div slot="colors">Brązowe</div>
-        <div slot="colors">Czarne</div>
-        <div slot="sizes">...</div>
-        <div slot="sizes">39</div>
-        <div slot="sizes">40</div>
-        <div slot="sizes">41</div>
-        <div slot="sizes">42</div>
-        <div slot="sizes">...</div>
-      </product-card>
-    </div>
+
+    <product-list></product-list>
   </body>
 </html>
